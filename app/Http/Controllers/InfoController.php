@@ -18,14 +18,6 @@ class InfoController extends Controller
         $response = Http::get('https://api.kawalcorona.com/');
         $data = $response->json();
 
-        // $negara = collect($data)->flatten(1);
-
-        // $filtered = $negara->whereIn('Country_Region', ['Malaysia','Singapore']);
-
-
-        // dd($filtered);
-
-
         $positif = Http::get('https://api.kawalcorona.com/positif');
         $data1 = $positif->json();
         
@@ -40,9 +32,26 @@ class InfoController extends Controller
         $country= $country->json();
         $country = $country['Malaysia'];
 
-        // dd($country);
 
         return view('index', compact('data','data1','data2','data3','country'));
+
+
+    }
+
+    public function faq()
+    {
+        
+
+        $c= Http::get('http://covid19-news.herokuapp.com/api/covid19/faqs');
+        $c= $c->json();
+
+        $source = $c['source'];
+
+        $data = $c['data'];
+
+
+        return view('/faq', compact('source','data'));
+
 
 
     }
@@ -51,6 +60,22 @@ class InfoController extends Controller
     {
 
         $country = $request->country;
+
+        $stat = Http::get('https://coronavirus-19-api.herokuapp.com/countries/');
+
+        
+
+        $stat =  $stat->json();
+        $stats = collect($stat)->where('country',$country);
+        $todayCases = $stats->pluck('todayCases');
+        
+        $todayDeaths = $stats->pluck('todayDeaths');
+
+
+        $active = $stats->pluck('active');
+        $critical = $stats->pluck('critical');
+        
+
         $c= Http::get('https://pomber.github.io/covid19/timeseries.json');
 
         $nama_negara = Http::get('https://api.kawalcorona.com/');
@@ -90,9 +115,7 @@ class InfoController extends Controller
         ]);
 
        
-        // dd($labels);
-        // dd($c);
-        return view('country', compact('cntry','country','chart','negara_sorted'));
+        return view('country', compact('cntry','country','chart','negara_sorted','stats','todayCases','todayDeaths','active','critical'));
 
 
 
@@ -110,7 +133,6 @@ class InfoController extends Controller
         $negara = $negara->whereIn('Country_Region', ['Malaysia','Singapore','Indonesia','Thailand','Vietnam','Philippines','Brunei','Laos','Cambodia']);
 
 
-        // dd($filtered);
 
         $source = Http::get('https://pomber.github.io/covid19/timeseries.json');
         $data = $source->json();
@@ -127,7 +149,6 @@ class InfoController extends Controller
 
 
         $labels = collect($malaysia)->pluck('date');
-            
         $type = $type;
 
         $malaysia1 = collect($malaysia)->pluck($type);
@@ -252,6 +273,20 @@ class InfoController extends Controller
     public function country($country)
 
     {
+
+
+        $stat = Http::get('https://coronavirus-19-api.herokuapp.com/countries/');
+        $stat =  $stat->json();
+        $stats = collect($stat)->where('country',$country);
+        $todayCases = $stats->pluck('todayCases');
+        $todayDeaths = $stats->pluck('todayDeaths');
+        $active = $stats->pluck('active');
+        $critical = $stats->pluck('critical');
+
+
+        $d = $stats->pluck('deaths');
+
+
         $c= Http::get('https://pomber.github.io/covid19/timeseries.json');
 
         $nama_negara = Http::get('https://api.kawalcorona.com/');
@@ -264,6 +299,7 @@ class InfoController extends Controller
         $cntry_name = $c[$country];
         $cntry = collect($cntry_name)->sortByDesc('confirmed');
 
+        
 
         $labels = collect($cntry_name)->pluck('date');
         $confirmed = collect($cntry_name)->pluck('confirmed');
@@ -288,7 +324,7 @@ class InfoController extends Controller
         ]);
 
        
-        return view('country', compact('cntry','country','chart','negara_sorted'));
+        return view('country', compact('cntry','country','chart','negara_sorted','stats','todayCases','todayDeaths','active','critical'));
 
     }
 }
