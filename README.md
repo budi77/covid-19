@@ -30,6 +30,7 @@ Sistem yang akan memaparkan statistik pandemik Virus Corona (Covid-19) di seluru
 <a href="https://ibb.co/nM1Pgsv"><img src="https://i.ibb.co/N2NTV6P/hh.png" alt="hh" border="0"></a>
 </center>
 
+Live Preview : <a href="https://covid19.budihermawan.com">https://covid19.budihermawan.com</a>
 
 ## SUMBER DATA (API)
 
