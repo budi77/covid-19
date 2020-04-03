@@ -11,3 +11,11 @@ Sistem yang akan memaparkan statistik pandemik Virus Corona (Covid-19) di seluru
 - Public API
 - Livewire
 
+
+
+## SCREENSHOT
+
+<img src="https://drive.google.com/file/d/11FAV7mOYZxjM9ZGUqEeXxrKBDwQjOttZ/view?usp=sharing
+" alt="">
+
+
