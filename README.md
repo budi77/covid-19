@@ -15,7 +15,7 @@ Sistem yang akan memaparkan statistik pandemik Virus Corona (Covid-19) di seluru
 
 ## SCREENSHOT
 
-<img src="https://drive.google.com/file/d/11FAV7mOYZxjM9ZGUqEeXxrKBDwQjOttZ/view?usp=sharing
-" alt="">
-
+<a href="https://ibb.co/nM1Pgsv"><img src="https://i.ibb.co/N2NTV6P/hh.png" alt="hh" border="0"></a>
+<a href="https://ibb.co/mHmtkqW"><img src="https://i.ibb.co/7GHVPWm/tt.png" alt="tt" border="0"></a>
+<a href="https://ibb.co/Wt2qPq2"><img src="https://i.ibb.co/nCLZnZL/mn.png" alt="mn" border="0"></a>
 
