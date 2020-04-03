@@ -8,12 +8,11 @@ Sistem yang akan memaparkan statistik pandemik Virus Corona (Covid-19) di seluru
 
 - Laravel 7.3
 - ChartJs
-- Public API
 - Livewire
+- Public API
 
 
-
-## SCREENSHOT
+## SCREENSHOTS
 <center>
 <p>Main Page</P>
 <a href="https://ibb.co/Wt2qPq2"><img src="https://i.ibb.co/nCLZnZL/mn.png" alt="mn" border="0"></a>
