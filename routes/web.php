@@ -21,4 +21,6 @@ Route::get('/', 'InfoController@index');
 Route::get('/country/{country?}', 'InfoController@country');
 Route::post('/country', 'InfoController@search')->name('search');
 Route::get('/asean/{type?}', 'InfoController@asean')->name('asean');
+Route::get('/faq', 'InfoController@faq')->name('faq');
+
 

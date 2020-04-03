@@ -33,7 +33,36 @@
             {!! $chart->container() !!}
         </div>
 
-					
+        <div class="row mt-6">
+											<div class="col text-center">
+												<h5 class="font-weight-normal mt-2">KES HARI INI</h5>
+												<h3 class="text-xxl mb-1 social-content  number-font text-info"> {{$todayCases}}</h3>
+												<p class="mb-0 text-muted"><span class="text-lg font-weight-700"></span>ORANG</p>
+												
+											</div>
+											<div class="col text-center">
+												<h5 class="font-weight-normal mt-2">MENINGGAL HARI INI</h5>
+												<h3 class="text-xxl mb-1 social-content danger number-font text-info"> {{$todayDeaths}}</h3>
+												<p class="mb-0 text-muted"><span class="text-lg font-weight-700"></span>ORANG</p>
+												
+											</div>
+											<div class="col text-center">
+												<h5 class="font-weight-normal mt-2">AKTIF</h5>
+												<h3 class="text-xxl mb-1 social-content  number-font text-info"> {{$active}}</h3>
+												<p class="mb-0 text-muted"><span class="text-lg font-weight-700"></span>ORANG</p>
+											
+											</div>
+
+                      <div class="col text-center">
+												<h5 class="font-weight-normal mt-2">KRITIKAL</h5>
+												<h3 class="text-xxl mb-1 social-content  number-font text-info"> {{$critical}}</h3>
+												<p class="mb-0 text-muted"><span class="text-lg font-weight-700"></span>ORANG</p>
+											
+											</div>
+											<!-- <div class="chart-wrapper">
+											<canvas id="deals" class="chart-dropshadow-success chartjs-render-monitor" hidden="" height="113" style="display: block; height: 84px; width: 0px;" width="0"></canvas>
+										</div> -->
+										</div>
 
 <br>
 

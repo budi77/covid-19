@@ -6,10 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css" >
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+
+    
     <style>
+
+.card {
+    overflow:hidden;
+}
+
+.card-body .rotate {
+    z-index: 8;
+    float: right;
+    height: 100%;
+}
+
+.card-body .rotate i {
+    color: rgba(20, 20, 20, 0.15);
+    position: absolute;
+    left: 0;
+    left: auto;
+    right: -10px;
+    bottom: 0;
+    display: block;
+    -webkit-transform: rotate(-44deg);
+    -moz-transform: rotate(-44deg);
+    -o-transform: rotate(-44deg);
+    -ms-transform: rotate(-44deg);
+    transform: rotate(-44deg);
+}
 
 </style>
     <title>COVID-19</title>
@@ -33,6 +60,10 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/asean"><i class="fa fa-map-marker"></i>  NEGARA ASEAN</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/faq"><i class="fa fa-question"></i>  FAQ</a>
       </li>
 
       

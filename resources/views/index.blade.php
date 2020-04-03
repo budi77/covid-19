@@ -9,53 +9,10 @@
 
 <h2>STATISTIK COVID-19   
 </h2>
-<small class="text-muted">* Sumber Data : JHU </small>
-<div class="row pt-6">
-							
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card bg-warning img-card box-primary-shadow">
-									<div class="card-body">
-										<div class="d-flex">
-											<div class="text-white">
-												<p class="text-white mb-0">TOTAL POSITIF</p>
-												<h2 class="mb-0 number-font">{{$data1['value']}}</h2>
-												<p class="text-white mb-0">ORANG</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div><!-- COL END -->
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card bg-success img-card box-secondary-shadow">
-									<div class="card-body">
-										<div class="d-flex">
-											<div class="text-white">
-												<p class="text-white mb-0">TOTAL SEMBUH</p>
-												<h2 class="mb-0 number-font">{{$data2['value']}}</h2>
-												<p class="text-white mb-0">ORANG</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div><!-- COL END -->
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card  bg-danger img-card box-success-shadow">
-									<div class="card-body">
-										<div class="d-flex">
-											<div class="text-white">
-												<p class="text-white mb-0">TOTAL MENINGGAL</p>
-												<h2 class="mb-0 number-font">{{$data3['value']}}</h2>
-												<p class="text-white mb-0">ORANG</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-						</div>
 
 
-<br>
+<livewire:world-stats>
+
 
 
 <table class="table table-sm table-striped">
