@@ -7,6 +7,7 @@ Sistem yang akan memaparkan statistik pandemik Virus Corona (Covid-19) di seluru
 ## MAKLUMAT SISTEM
 
 - Laravel Framework versi 7.3
+- Boostrap 4
 - ChartJs
 - Livewire
 - Public API
